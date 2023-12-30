@@ -1,16 +1,16 @@
-import cv2
+from PIL import Image
 import numpy as np
 import tensorflow
 import streamlit as st
 
 # Load pre-trained model
-model = tensorflow.keras.models.load_model("MobileNet.h5", compile=False)
+model = tensorflow.keras.models.load_model("D:\Cat_Dog_Classification\MobileNet.h5", compile=False)
 labels = {0: 'Cat', 1: 'Dog'}
 st.title("Cat Dog Classification")
 
 # Function to preprocess the image
 def preprocess_image(image):
-    img = cv2.imread(image)
+    img = Image.open(image).convert('RGB')
     img = img.resize((224, 224))
     img_array = np.array(img) / 255.0
     img_array = np.expand_dims(img_array, axis=0)
