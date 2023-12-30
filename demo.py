@@ -17,9 +17,11 @@ def process_image(image_path):
     predicted_class = np.argmax(predictions)
     confidence_score = predictions[0, predicted_class]
 
+    #display result
     if predicted_class == 0:
         st.write("Cat")
-    else: st.write("Dog")
+    elif predicted_class == 1: 
+        st.write("Dog")
     st.write("Confidence Score:", confidence_score)
 
 # Upload image through Streamlit
@@ -28,9 +30,6 @@ uploaded_image = st.file_uploader("Choose a dog or cat image")
 if uploaded_image is not None:
     st.image(uploaded_image, caption="Uploaded Image.", use_column_width=True)
     st.write("")
-    st.write("Classifying...")
 
     # Preprocess and predict
     img_array = process_image(uploaded_image)
-
-    # Display result
