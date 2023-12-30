@@ -38,22 +38,10 @@ MobileNet V2 is a lightweight and efficient convolutional neural network (CNN) a
 ---
 
 ### **DEMO**
-  - Run demo:
+  - Link demo:
   
   ```
-  streamlit run app.py
+    https://catdogclassification.streamlit.app/
   ```
 
-When the demo is starting, press the button START to run the demo. You can also change your device.
-
-
-![alt text](dataset/demo.png)
-
----
-
-### **RESULT**
-
-A demo will return whether a person is wearing a face mask or not.
-
-![alt text](dataset/mask.png)
-![alt text](dataset/NoMask.png)
+When the demo is starting, browse an image to classify.
