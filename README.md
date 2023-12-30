@@ -16,7 +16,7 @@ Technologies I used:
 ---
 
 ### **INSTALLATION**
-I highly recommend you using Google Colab to run the Face_Mask_Detection.ipynb file because it already has packages and libraries I use. But if you want to run on your local machine, following the instruction below.
+I highly recommend you using Google Colab to run the dogcat_classification.ipynb file because it already has packages and libraries I use. But if you want to run on your local machine, following the instruction below.
   - Install essential libraries and packages:
   
   ```
@@ -27,17 +27,13 @@ I highly recommend you using Google Colab to run the Face_Mask_Detection.ipynb f
 
 ### **DATA INFORMATION** 
 
-This data 2 classes: Mask or WithoutMask
-
-Mask: 1915 images
-
-WithoutMask: 1918 images
+This data 2 classes: Dog and Cat. Each class include around 2500 images.
 
 ---
 
 ### **MOBILE NET V2**
 
-MobileNet V2 is a lightweight and efficient convolutional neural network (CNN) architecture designed for computer vision tasks. MobileNet V2 utilizes depthwise separable convolutions, making it ideal for applications on mobile devices and embedded systems. With its compact design and impressive performance, MobileNet V2 is a popular choice for tasks such as image classification, object detection, and semantic segmentation. This README provides an overview of using MobileNet V2 for the task of facial mask classification using Haar cascade and MobileNet V2.
+MobileNet V2 is a lightweight and efficient convolutional neural network (CNN) architecture designed for computer vision tasks. MobileNet V2 utilizes depthwise separable convolutions, making it ideal for applications on mobile devices and embedded systems. With its compact design and impressive performance, MobileNet V2 is a popular choice for tasks such as image classification, object detection, and semantic segmentation. This README provides an overview of using MobileNet V2 for the task of animal classification.
 
 ---
 
