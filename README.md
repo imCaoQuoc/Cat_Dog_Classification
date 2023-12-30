@@ -1,20 +1,16 @@
 # CAT AND DOG CLASSIFICATION USING MOBILET NET V2
 
-This project aims to develop a face mask classification system using Haar Cascade and MobileNet V2 deep learning models. The system can determine whether a person is wearing a face mask or not, based on the input image or video.
+This project aims to develop an animal (Dog and Cat) classification system using MobileNet V2 deep learning models. The system can determine whether an image is a dog or a cat.
 
  ---
 
 ### **INTRODUCTION**
-In the wake of the COVID-19 pandemic, face masks have become an essential part of our daily lives to prevent the spread of the virus. Automating the process of face mask detection can be crucial in ensuring compliance with safety guidelines in various settings such as public places, workplaces, and transportation.
-
-This project leverages two powerful deep learning models: Haar Cascade and MobileNet V2. Haar Cascade is a machine learning-based approach that can detect faces in real-time by analyzing the features present in the image. MobileNet V2, on the other hand, is a lightweight convolutional neural network architecture known for its efficiency and accuracy in image classification tasks.
+"Cat and Dog Classification" is a branch of computer vision focused on training models to differentiate between images of cats and dogs. This involves teaching machines to automatically recognize visual features and make accurate predictions. Beyond the adorable context of pets, this task has applications in security, wildlife monitoring, and automated image recognition systems.
 
 Technologies I used:
   - [Streamlit](https://streamlit.io/) to create a simple web demo.
-  - [Streamlit_webrtc](https://pypi.org/project/streamlit-webrtc/) to use real-time camera on Streamlit.
   - [Tensorflow](https://www.tensorflow.org/) to build a deep learning model.
-  - [OpenCV](https://opencv.org/) doing tasks relate to Computer Vision.
-  - [Sci-kit Learn](https://scikit-learn.org/stable/) to process data.
+  - [Numpy](https://numpy.org) process image and array.
   - [Streamlit documentation](https://www.youtube.com/playlist?list=PLtqF5YXg7GLmCvTswG32NqQypOuYkPRUE) to learn the basic of streamlit.
 
 ---
