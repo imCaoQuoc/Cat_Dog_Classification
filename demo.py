@@ -8,10 +8,16 @@ model = tensorflow.keras.models.load_model("MobileNet.h5", compile=False)
 labels = {0: 'Cat', 1: 'Dog'}
 st.title("Cat Dog Classification")
 
-
+# Function to preprocess the image
+def preprocess_image(image):
+    img = cv2.imread(image)
+    img = img.resize((224, 224))
+    img_array = np.array(img) / 255.0
+    img_array = np.expand_dims(img_array, axis=0)
+    return img_array
 
 # Upload image through Streamlit
-uploaded_image = st.file_uploader("Choose a dog or cat image", type="jpg")
+uploaded_image = st.file_uploader("Choose a dog or cat image")
 
 if uploaded_image is not None:
     st.image(uploaded_image, caption="Uploaded Image.", use_column_width=True)
