@@ -9,13 +9,18 @@ labels = {0: 'Cat', 1: 'Dog'}
 st.title("Cat Dog Classification")
 
 # Function to preprocess the image
-def process_image(image_path, pretrained_model):
-    image = Image.open(image_path)
+def process_image(image_path):
+    image = Image.open(image_path).convert('RGB')
     image = image.resize((224, 224))
-    image_array = np.array(image)
-    predictions = pretrained_model.predict(np.expand_dims(image_array, axis=0))
+    image_array = np.array(image) / 255.0
+    predictions = model.predict(np.expand_dims(image_array, axis=0))
     predicted_class = np.argmax(predictions)
     confidence_score = predictions[0, predicted_class]
+
+    if predicted_class == 0:
+        st.write("Cat")
+    else: st.write("Dog")
+    st.write("Confidence Score:", confidence_score)
 
 # Upload image through Streamlit
 uploaded_image = st.file_uploader("Choose a dog or cat image")
@@ -26,11 +31,6 @@ if uploaded_image is not None:
     st.write("Classifying...")
 
     # Preprocess and predict
-    img_array = process_image(uploaded_image, model)
-    predictions = model.predict(img_array)
+    img_array = process_image(uploaded_image)
 
     # Display result
-    if predictions[0][0] > predictions[0][1]:
-        st.write("Prediction: Dog")
-    else:
-        st.write("Prediction: Cat")
