@@ -4,7 +4,7 @@ import tensorflow
 import streamlit as st
 
 # Load pre-trained model
-model = tensorflow.keras.models.load_model("D:\Cat_Dog_Classification\MobileNet.h5", compile=False)
+model = tensorflow.keras.models.load_model("MobileNet.h5", compile=False)
 labels = {0: 'Cat', 1: 'Dog'}
 st.title("Cat Dog Classification")
 
